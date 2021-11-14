@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { Card } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 const product = [
     {id:1, title:'chamarra', price:55, productUrl:'https://m.media-amazon.com/images/I/61H7TGjtyAL._AC_SX569_.jpg'},
@@ -31,9 +32,11 @@ const Item = ({item}) => {
                 <Card.Body>
                     <Card.Title>{product.title}</Card.Title>
                     <Card.Text>
-                    ${product.price}
+                   <p> ID: {product.id}</p>
+                   <p> ${product.price}</p>
+                   <p>{product.category}</p>
                     </Card.Text>
-                    <button className="btn addOn">Comprar</button>
+                   <Link to={`/item/${product.id}`}> <button className="btn addOn">Comprar</button></Link>
                 </Card.Body>
                 </Card>
         </div>

@@ -62,3 +62,16 @@ p{
     text-align: left;
     border-bottom: solid 2px #289c8f ;
 }
+.img-conent{
+    overflow: hidden;
+}
+.img-item{
+    width: 100%;
+    padding: 5%;
+}
+@media only screen and (max-width:600px){
+    .contenido {
+        max-width: 100%;
+        padding: 0 5%;
+    }
+}
